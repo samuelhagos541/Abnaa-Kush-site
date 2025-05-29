@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<div class="flex justify-center mb-3">
+  <div style="background: #fff; border-radius: 9999px; padding: 0.25rem; border: 3px solid #b91c1c; box-shadow: 0 0 24px #b91c1c77, 0 0 0 #fff;">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAABtUlEQVR4nO3VsQ3CMBCA4d3+F7yK2/2QOQxqRpEyKz8bX8fVvM4H2q1yAlAQAAAAAAAAAAAAAAgFvYO7fX6fV9vI/b7/0v1x8TZ8z8AygbJs4Bf3H8lxvV8TfAnw/4/4HwD5H8E+B/A/gfAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H0E+B/A/gXAPkfQT4H8D+BcA+R/BPgfwH4HwD5H8A1Pxa0J7q93GAAAAAElFTkSuQmCC"
+      alt="Abnaa Kush Praise & Worship Team Logo"
+      class="w-32 h-32 md:w-36 md:h-36 object-contain transition hover:scale-105 duration-300" loading="lazy"/>
+</div>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
