@@ -1,10 +1,3 @@
-<div align="center" style="margin-bottom: 1.5rem;">
-  <!-- Visible logo with white background and border for clear contrast -->
-  <div style="background: #fff; border-radius: 9999px; display: inline-block; padding: 0.5rem; border: 4px solid #b91c1c; box-shadow: 0 0 28px #b91c1c77, 0 0 0 #fff;">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAABtUlEQVR4nO3VsQ3CMBCA4d3+F7yK2/2QOQxqRpEyKz8bX8fVvM4H2q1yAlAQAAAAAAAAAAAAAAgFvYO7fX6fV9vI/b7/0v1x8TZ8z8AygbJs4Bf3H8lx[...]" alt="Abnaa Kush Praise & Worship Team Logo" width="160" height="160" style="display: block; margin: 0 auto; object-fit: contain; background: #fff; border-radius: 50%; box-shadow: 0 0 28px #b91c1c77;" />
-  </div>
-</div>
-
 # Abnaa Kush
 
 <p align="center" class="subtitle" style="color: #7dd3fc; font-style: italic;">
