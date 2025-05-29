@@ -38,12 +38,23 @@
       text-shadow: 0 4px 18px #8b0000cc;
     }
     .main-title {
-      font-size: 2.1em;
-      color: #1d3557;
-      margin-bottom: 24px;
       direction: rtl;
       font-family: 'Cairo', 'Segoe UI', 'Arial', 'Noto Naskh Arabic', serif;
       font-weight: 800;
+      margin-bottom: 8px;
+      color: #1d3557;
+    }
+    .title-line1 {
+      font-size: 2.1em;
+      margin-bottom: 0.1em;
+      letter-spacing: 0.01em;
+    }
+    .title-line2 {
+      font-size: 1.15em;
+      color: #1976d2;
+      font-weight: 600;
+      margin-top: 0;
+      letter-spacing: 0.02em;
     }
     .follow-us {
       font-size: 1.15em;
@@ -113,8 +124,11 @@
         min-width: 0;
         border-radius: 10px;
       }
-      .main-title {
-        font-size: 1.25em;
+      .title-line1 {
+        font-size: 1.19em;
+      }
+      .title-line2 {
+        font-size: 0.95em;
       }
       .footer {
         max-width: 95vw;
@@ -136,7 +150,10 @@
 </head>
 <body>
   <div class="main-box">
-    <div class="main-title glow-red">فريق ابناء كوش للعبادة و التسبيح</div>
+    <div class="main-title glow-red">
+      <div class="title-line1">فريق ابناء كوش</div>
+      <div class="title-line2">للعبادة و التسبيح</div>
+    </div>
     <div class="follow-us glow-red">تابعونا على منصات التواصل الاجتماعي</div>
     <div class="socials">
       <a href="https://www.instagram.com/abnaa.kush/" target="_blank" title="Instagram" aria-label="Instagram">
