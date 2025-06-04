@@ -4,32 +4,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>فريق ابناء كوش للعبادة و التسبيح</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN for utility classes -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom Tailwind Configuration (optional, but good for custom fonts) */
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-
-    /* Custom Fonts for specific elements to ensure Cairo is prioritized */
-    .font-cairo-custom {
-      font-family: 'Cairo', 'Segoe UI', 'Arial', 'Noto Naskh Arabic', serif;
-    }
-    .font-inter-custom {
-      font-family: 'Inter', 'Cairo', 'Segoe UI', Arial, sans-serif;
-    }
-
-    /* Keyframes for main box fade-in */
+    .font-cairo-custom { font-family: 'Cairo', 'Segoe UI', 'Arial', 'Noto Naskh Arabic', serif; }
+    .font-inter-custom { font-family: 'Inter', 'Cairo', 'Segoe UI', Arial, sans-serif; }
     @keyframes fadeInBox {
       0% { opacity: 0; transform: scale(0.94) translateY(10px);}
       100% { opacity: 1; transform: scale(1) translateY(0);}
     }
-    /* Class to apply main box fade-in animation */
     .animate-main-box {
       animation: fadeInBox 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
-
-    /* Added pulsing glow animation for text */
     @keyframes pulseGlow {
       0% { text-shadow: 0 2px 12px #8b0000aa; }
       50% { text-shadow: 0 2px 20px #8b0000dd, 0 0 30px #ff4d4daa; }
@@ -37,49 +23,30 @@
     }
     .animate-pulse-glow {
       animation: pulseGlow 2.5s infinite ease-in-out;
-      animation-delay: 1.5s; /* Start after initial page animations */
+      animation-delay: 1.5s;
     }
-
-    /* Keyframes for icon pop-in animation */
     @keyframes iconPopIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.3) translateY(20px);
-      }
-      60% {
-        opacity: 1;
-        transform: scale(1.1) translateY(-5px); /* Overshoot */
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+      0% { opacity: 0; transform: scale(0.3) translateY(20px);}
+      60% { opacity: 1; transform: scale(1.1) translateY(-5px);}
+      100% { opacity: 1; transform: scale(1) translateY(0);}
     }
-    /* Class to apply icon pop-in animation */
     .animate-icon-pop-in {
       animation-name: iconPopIn;
       animation-duration: 0.6s;
-      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy effect */
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
       animation-fill-mode: forwards;
-      opacity: 0; /* Initial state for animation */
-      transform: scale(0.3); /* Initial state for animation */
+      opacity: 0;
+      transform: scale(0.3);
     }
-
-
-    /* Custom transition for social icons, including filter for brightness and saturation */
     .social-icon-transition {
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease-out, filter 0.3s ease-out;
     }
-
-    /* Active state for social icons (when clicked) */
     .socials a:active {
-      transform: scale(0.95) translateY(0px) !important; /* Slightly squish down */
-      box-shadow: 0 2px 10px #1976d233 !important; /* Smaller shadow on press */
-      filter: brightness(90%) saturate(100%) !important; /* Slightly dim */
-      transition-duration: 0.1s; /* Quick press feedback */
+      transform: scale(0.95) translateY(0px) !important;
+      box-shadow: 0 2px 10px #1976d233 !important;
+      filter: brightness(90%) saturate(100%) !important;
+      transition-duration: 0.1s;
     }
-
-    /* Keyframes for footer fade-in */
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(5px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -87,30 +54,17 @@
     .animate-fade-in {
       animation: fadeIn 2s 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
-
-    /* Spinner animation */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .animate-spin-custom {
-      animation: spin 1.2s linear infinite;
-    }
-
-    /* Responsive adjustments for main-box padding and border-radius */
     @media (max-width: 540px) {
       .main-box-responsive {
-        padding: 25px 5vw 20px 5vw; /* Adjusted padding for vw */
+        padding: 25px 5vw 20px 5vw;
         border-radius: 12px;
       }
+      .title-line1 { font-size: 1.19em !important; }
+      .title-line2 { font-size: 0.95em !important; }
     }
   </style>
 </head>
 <body class="m-0 min-h-screen bg-[#b3e0ff] text-[#222] flex justify-center items-center h-screen overflow-x-hidden relative">
-  <div id="loading-spinner" class="fixed inset-0 w-full h-full bg-[#b3e0ff] flex justify-center items-center z-[1000] transition-opacity duration-500 ease-out">
-    <div class="spinner border-8 border-[#f3f3f3] border-t-[#1976d2] rounded-full w-[60px] h-[60px] animate-spin-custom"></div>
-  </div>
-
   <div class="main-box bg-[#e6f7ff] rounded-[18px] shadow-[0_8px_36px_#1976d240,0_1.5px_8px_#8b000044] px-5 py-10 text-center max-w-[420px] w-[90%] flex flex-col items-center opacity-0 transform scale-[0.94] translate-y-[10px] main-box-responsive" id="main-content">
     <div class="main-title rtl font-cairo-custom font-extrabold mb-2 text-[#1d3557] animate-pulse-glow">
       <div class="title-line1 text-[2.1em] mb-[0.1em] tracking-tight">فريق ابناء كوش</div>
@@ -189,113 +143,21 @@
       © 2025 فريق ابناء كوش للعبادة و التسبيح. جميع الحقوق محفوظة.
     </div>
   </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const loadingSpinner = document.getElementById('loading-spinner');
       const mainContent = document.getElementById('main-content');
       const socialLinks = document.querySelectorAll('.socials a');
-
-      // Initially hide main content and social icons
-      mainContent.style.opacity = '0';
-      socialLinks.forEach(link => {
-        link.style.opacity = '0';
-        link.style.transform = 'scale(0.3) translateY(20px)'; // Initial state for iconPopIn
+      mainContent.classList.add('animate-main-box');
+      mainContent.style.opacity = '1';
+      socialLinks.forEach((link, index) => {
+        setTimeout(() => {
+          link.classList.add('animate-icon-pop-in');
+        }, index * 100);
       });
-
-      // Show spinner initially
-      loadingSpinner.style.opacity = '1';
-      loadingSpinner.style.display = 'flex';
-
-      // Hide spinner and then animate main content and social icons
+      // Footer fade-in
       setTimeout(() => {
-        loadingSpinner.style.opacity = '0';
-        setTimeout(() => {
-          loadingSpinner.style.display = 'none';
-          // Trigger main content animation
-          mainContent.classList.add('animate-main-box');
-
-          // Listen for the end of the main content animation
-          mainContent.addEventListener('animationend', function handler() {
-            mainContent.removeEventListener('animationend', handler); // Remove listener to prevent multiple calls
-
-            // Staggered animation for social icons
-            socialLinks.forEach((link, index) => {
-              setTimeout(() => {
-                link.classList.add('animate-icon-pop-in');
-              }, index * 100); // Stagger by 100ms
-            });
-          });
-
-        }, 500); // Matches opacity transition duration for spinner
-      }, 2000); // Spinner visible for 2 seconds
-
-      // Function to show "Copied!" message
-      function showCopiedMessage(element) {
-        // Remove any existing message for this element
-        let existingMessage = element.querySelector('.copied-message');
-        if (existingMessage) {
-          existingMessage.remove();
-        }
-
-        const message = document.createElement('span');
-        message.className = 'copied-message absolute bg-[#4CAF50] text-white px-2.5 py-1.5 rounded-md text-sm opacity-0 transition-all duration-500 ease-out pointer-events-none whitespace-nowrap z-10';
-        message.textContent = 'Copied!';
-        element.appendChild(message);
-
-        // Position the message relative to the icon
-        const iconRect = element.getBoundingClientRect();
-        // Calculate left position relative to the parent element (link)
-        const parentRect = element.getBoundingClientRect();
-        message.style.left = `${(parentRect.width / 2) - (message.offsetWidth / 2)}px`; // Center horizontally
-        message.style.top = `-${iconRect.height / 2}px`; // Position above the icon
-
-        // Trigger fade-in and slide-up animation
-        setTimeout(() => {
-          message.classList.add('show');
-          message.style.transform = 'translateY(-20px)'; // Move up slightly
-          message.style.opacity = '1';
-        }, 10); // Small delay to allow reflow before animation
-
-        // Hide and remove message after a delay
-        setTimeout(() => {
-          message.classList.remove('show');
-          message.style.transform = 'translateY(0)'; // Reset transform
-          message.style.opacity = '0';
-          setTimeout(() => {
-            message.remove();
-          }, 500); // Matches transition duration
-        }, 1500); // Message visible for 1.5 seconds
-      }
-
-      // Add click event listeners to social links
-      socialLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault(); // Prevent default link behavior (opening new tab immediately)
-
-          const urlToCopy = link.href;
-
-          // Copy URL to clipboard
-          const tempInput = document.createElement('textarea');
-          tempInput.value = urlToCopy;
-          document.body.appendChild(tempInput);
-          tempInput.select();
-          try {
-            document.execCommand('copy');
-            showCopiedMessage(link); // Show "Copied!" message on success
-          } catch (err) {
-            console.error('Failed to copy text: ', err);
-            // Optionally, show an error message to the user
-          } finally {
-            document.body.removeChild(tempInput);
-          }
-
-          // Open the link in a new tab after a short delay to allow message to show
-          setTimeout(() => {
-            window.open(urlToCopy, '_blank');
-          }, 500); // Adjust delay as needed
-        });
-      });
+        document.querySelector('.footer').style.opacity = '1';
+      }, 1100);
     });
   </script>
 </body>
