@@ -1,164 +1,372 @@
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>فريق ابناء كوش للعبادة و التسبيح</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Inter:wght@500;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CDN for utility classes -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .font-cairo-custom { font-family: 'Cairo', 'Segoe UI', 'Arial', 'Noto Naskh Arabic', serif; }
-    .font-inter-custom { font-family: 'Inter', 'Cairo', 'Segoe UI', Arial, sans-serif; }
-    @keyframes fadeInBox {
-      0% { opacity: 0; transform: scale(0.94) translateY(10px);}
-      100% { opacity: 1; transform: scale(1) translateY(0);}
-    }
-    .animate-main-box {
-      animation: fadeInBox 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    }
-    @keyframes pulseGlow {
-      0% { text-shadow: 0 2px 12px #8b0000aa; }
-      50% { text-shadow: 0 2px 20px #8b0000dd, 0 0 30px #ff4d4daa; }
-      100% { text-shadow: 0 2px 12px #8b0000aa; }
-    }
-    .animate-pulse-glow {
-      animation: pulseGlow 2.5s infinite ease-in-out;
-      animation-delay: 1.5s;
-    }
-    @keyframes iconPopIn {
-      0% { opacity: 0; transform: scale(0.3) translateY(20px);}
-      60% { opacity: 1; transform: scale(1.1) translateY(-5px);}
-      100% { opacity: 1; transform: scale(1) translateY(0);}
-    }
-    .animate-icon-pop-in {
-      animation-name: iconPopIn;
-      animation-duration: 0.6s;
-      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      animation-fill-mode: forwards;
-      opacity: 0;
-      transform: scale(0.3);
-    }
-    .social-icon-transition {
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease-out, filter 0.3s ease-out;
-    }
-    .socials a:active {
-      transform: scale(0.95) translateY(0px) !important;
-      box-shadow: 0 2px 10px #1976d233 !important;
-      filter: brightness(90%) saturate(100%) !important;
-      transition-duration: 0.1s;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(5px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in {
-      animation: fadeIn 2s 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    }
-    @media (max-width: 540px) {
-      .main-box-responsive {
-        padding: 25px 5vw 20px 5vw;
-        border-radius: 12px;
-      }
-      .title-line1 { font-size: 1.19em !important; }
-      .title-line2 { font-size: 0.95em !important; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فريق أبناء كوش للعبادة والتسبيح | Sons of Kush</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Deep Blue
+                        secondary: '#eab308', // Gold/Yellow
+                        accent: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth transitions for language switching */
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Make sure videos maintain a 16:9 aspect ratio */
+        .aspect-w-16 { position: relative; padding-bottom: 56.25%; }
+        .aspect-w-16 > * { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
 </head>
-<body class="m-0 min-h-screen bg-[#b3e0ff] text-[#222] flex justify-center items-center h-screen overflow-x-hidden relative">
-  <div class="main-box bg-[#e6f7ff] rounded-[18px] shadow-[0_8px_36px_#1976d240,0_1.5px_8px_#8b000044] px-5 py-10 text-center max-w-[420px] w-[90%] flex flex-col items-center opacity-0 transform scale-[0.94] translate-y-[10px] main-box-responsive" id="main-content">
-    <div class="main-title rtl font-cairo-custom font-extrabold mb-2 text-[#1d3557] animate-pulse-glow">
-      <div class="title-line1 text-[2.1em] mb-[0.1em] tracking-tight">فريق ابناء كوش</div>
-      <div class="title-line2 text-[1.15em] text-[#1976d2] font-semibold mt-0 tracking-wider">للعبادة و التسبيح</div>
-    </div>
-    <div class="follow-us text-[1.15em] text-[#222] mb-5 rtl font-cairo-custom font-semibold animate-pulse-glow">تابعونا على منصات التواصل الاجتماعي</div>
-    <div class="socials flex justify-center gap-5 my-3 flex-wrap">
-      <a href="https://www.instagram.com/abnaa.kush/" target="_blank" title="Instagram" aria-label="Instagram" class="group flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-[0_3px_15px_#1976d233] social-icon-transition border-[2.5px] border-[#b3e0ff] relative overflow-hidden hover:scale-112 hover:translate-y-[-8px] hover:rotate-[-5deg] hover:shadow-[0_20px_40px_#1976d2aa,0_5px_20px_#8b000066] hover:border-[#1976d2] hover:brightness-120 hover:saturate-150">
-        <svg class="social-icon w-[30px] h-[30px] block transition-transform duration-250 ease-out group-hover:scale-115" viewBox="0 0 50 50">
-          <defs>
-            <radialGradient id="ig" cx="0.35" cy="0.95" r="1.5">
-              <stop offset="0%" stop-color="#fdf497"/>
-              <stop offset="25%" stop-color="#fd5949"/>
-              <stop offset="50%" stop-color="#d6249f"/>
-              <stop offset="100%" stop-color="#285AEB"/>
-            </radialGradient>
-            <filter id="instagram-shadow">
-              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
-            </filter>
-          </defs>
-          <path d="M25 4.5 A 20.5 20.5 0 1 0 25 45.5 A 20.5 20.5 0 1 0 25 4.5 Z" fill="url(#ig)" filter="url(#instagram-shadow)"/>
-          <path d="M25 12.5 A 12.5 12.5 0 1 0 25 37.5 A 12.5 12.5 0 1 0 25 12.5 Z" fill="none" stroke="#fff" stroke-width="2.5"/>
-          <path d="M25 17.5 A 7.5 7.5 0 1 0 25 32.5 A 7.5 7.5 0 1 0 25 17.5 Z" fill="none" stroke="#fff" stroke-width="2.5"/>
-          <circle cx="34" cy="16" r="2.5" fill="#fff"/>
-        </svg>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61561245110328" target="_blank" title="Facebook" aria-label="Facebook" class="group flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-[0_3px_15px_#1976d233] social-icon-transition border-[2.5px] border-[#b3e0ff] relative overflow-hidden hover:scale-112 hover:translate-y-[-8px] hover:rotate-[5deg] hover:shadow-[0_20px_40px_#1976d2aa,0_5px_20px_#8b000066] hover:border-[#1976d2] hover:brightness-120 hover:saturate-150">
-        <svg class="social-icon w-[30px] h-[30px] block transition-transform duration-250 ease-out group-hover:scale-115" viewBox="0 0 50 50">
-          <defs>
-            <linearGradient id="fb-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#1877F3"/>
-              <stop offset="100%" stop-color="#0F67DA"/>
-            </linearGradient>
-            <filter id="facebook-shadow">
-              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
-            </filter>
-          </defs>
-          <circle cx="25" cy="25" r="22" fill="url(#fb-gradient)" filter="url(#facebook-shadow)"/>
-          <path d="M29 38V26h4l1-6h-5v-3c0-1.7.6-3 2.4-3H34V9.5C33.4 9.4 32 9 30.3 9 26.4 9 24 11.1 24 15v5h-4v6h4v12h6z" fill="#fff"/>
-        </svg>
-      </a>
-      <a href="https://www.tiktok.com/@abnaakush8" target="_blank" title="TikTok" aria-label="TikTok" class="group flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-[0_3px_15px_#1976d233] social-icon-transition border-[2.5px] border-[#b3e0ff] relative overflow-hidden hover:scale-112 hover:translate-y-[-8px] hover:rotate-[-5deg] hover:shadow-[0_20px_40px_#1976d2aa,0_5px_20px_#8b000066] hover:border-[#1976d2] hover:brightness-120 hover:saturate-150">
-        <svg class="social-icon w-[30px] h-[30px] block transition-transform duration-250 ease-out group-hover:scale-115" viewBox="0 0 50 50">
-          <defs>
-            <radialGradient id="tiktok-gradient" cx="50%" cy="50%" r="50%" fx="60%" fy="40%">
-              <stop offset="0%" stop-color="#333"/>
-              <stop offset="100%" stop-color="#000"/>
-            </radialGradient>
-            <filter id="tiktok-shadow">
-              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
-            </filter>
-          </defs>
-          <circle cx="25" cy="25" r="22" fill="url(#tiktok-gradient)" filter="url(#tiktok-shadow)"/>
-          <path d="M32.5 18.5c1.7 0 3.2-.7 4.3-1.7v4.3c-1.3.1-2.6-.1-3.8-.5v8.7c0 4.6-3.7 8.3-8.3 8.3s-8.3-3.7-8.3-8.3 3.7-8.3 8.3-8.3v4.1c-2.3 0-4.2 1.9-4.2 4.2 0 2.3 1.9 4.2 4.2 4.2 2.3 0 4.2-1.9 4.2-4.2V13.2c1.1.7 2.4 1.3 3.8 1.3z" fill="#fff"/>
-          <path d="M36.8 16.8c-1.1 1-2.7 1.7-4.3 1.7-1.4 0-2.7-.6-3.8-1.3v2c1.2.4 2.5.6 3.8.5v-2.9c1.1.7 2.4 1.3 3.8 1.3v-1.3h.5z" fill="#25F4EE"/>
-          <path d="M28.7 11.5v17.8c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2c0-2.3 1.9-4.2 4.2-4.2v-2c-4.6 0-8.3 3.7-8.3 8.3s3.7 8.3 8.3 8.3 8.3-3.7 8.3-8.3V12.8c-1.4-.3-2.7-.8-3.8-1.3z" fill="#FE2C55"/>
-        </svg>
-      </a>
-      <a href="https://m.youtube.com/@abnaakush4081" target="_blank" title="YouTube" aria-label="YouTube" class="group flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-[0_3px_15px_#1976d233] social-icon-transition border-[2.5px] border-[#b3e0ff] relative overflow-hidden hover:scale-112 hover:translate-y-[-8px] hover:rotate-[5deg] hover:shadow-[0_20px_40px_#1976d2aa,0_5px_20px_#8b000066] hover:border-[#1976d2] hover:brightness-120 hover:saturate-150">
-        <svg class="social-icon w-[30px] h-[30px] block transition-transform duration-250 ease-out group-hover:scale-115" viewBox="0 0 50 50">
-          <defs>
-            <radialGradient id="youtube-gradient" cx="50%" cy="50%" r="50%" fx="60%" fy="40%">
-              <stop offset="0%" stop-color="#FF0000"/>
-              <stop offset="100%" stop-color="#CC0000"/>
-            </radialGradient>
-            <filter id="youtube-shadow">
-              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
-            </filter>
-          </defs>
-          <circle cx="25" cy="25" r="22" fill="url(#youtube-gradient)" filter="url(#youtube-shadow)"/>
-          <polygon points="20,17 37,25 20,33" fill="#fff"/>
-        </svg>
-      </a>
-    </div>
-    <div class="footer text-[#1976d2] bg-[#1976d212] rounded-lg mt-7 mx-auto max-w-[340px] px-4 py-2.5 text-[0.97em] animate-fade-in opacity-0 font-inter-custom">
-      © 2025 فريق ابناء كوش للعبادة و التسبيح. جميع الحقوق محفوظة.
-    </div>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const mainContent = document.getElementById('main-content');
-      const socialLinks = document.querySelectorAll('.socials a');
-      mainContent.classList.add('animate-main-box');
-      mainContent.style.opacity = '1';
-      socialLinks.forEach((link, index) => {
-        setTimeout(() => {
-          link.classList.add('animate-icon-pop-in');
-        }, index * 100);
-      });
-      // Footer fade-in
-      setTimeout(() => {
-        document.querySelector('.footer').style.opacity = '1';
-      }, 1100);
-    });
-  </script>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-secondary selection:text-primary">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo / Title -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <img src="Untitled%20(17).jpg" alt="Sons of Kush Logo" class="w-12 h-12 object-cover rounded-full shadow-lg border-2 border-primary/10">
+                    <span class="font-bold text-xl md:text-2xl text-primary" data-i18n="nav_title">أبناء كوش</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-slate-600 hover:text-primary font-semibold transition-colors" data-i18n="nav_home">الرئيسية</a>
+                    <a href="#videos" class="text-slate-600 hover:text-primary font-semibold transition-colors" data-i18n="nav_videos">فيديوهاتنا</a>
+                    <a href="#social" class="text-slate-600 hover:text-primary font-semibold transition-colors" data-i18n="nav_social">التواصل</a>
+                    
+                    <!-- Language Toggle -->
+                    <button onclick="toggleLanguage()" class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-full transition-colors border border-slate-200">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="lang-btn-text">English</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button onclick="toggleLanguage()" class="text-slate-600 hover:text-primary">
+                        <i class="fa-solid fa-globe text-xl"></i>
+                    </button>
+                    <button class="text-slate-600 hover:text-primary focus:outline-none" id="mobile-menu-btn">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div class="md:hidden hidden bg-white border-t border-slate-100" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50" data-i18n="nav_home">الرئيسية</a>
+                <a href="#videos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50" data-i18n="nav_videos">فيديوهاتنا</a>
+                <a href="#social" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50" data-i18n="nav_social">التواصل</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative bg-primary text-white overflow-hidden">
+        <!-- Abstract Background shapes -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute -top-24 -end-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+            <svg class="absolute top-1/2 -start-24 w-64 h-64 text-secondary" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32 flex flex-col items-center text-center fade-in">
+            <span class="bg-white/20 text-secondary border border-white/30 px-4 py-1 rounded-full text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm" data-i18n="hero_badge">مرحباً بكم | Welcome</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-i18n="hero_title">
+                فريق أبناء كوش للعبادة والتسبيح
+            </h1>
+            <p class="text-lg md:text-2xl text-blue-100 max-w-2xl mb-10" data-i18n="hero_subtitle">
+                نرفع أصواتنا في العبادة والتسبيح لتمجيد اسمه. تابع أحدث أعمالنا وترانيمنا هنا.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#videos" class="bg-secondary hover:bg-yellow-400 text-primary font-bold text-lg px-8 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105" data-i18n="btn_watch">شاهد الفيديوهات</a>
+                <a href="#social" class="bg-transparent border-2 border-white/50 hover:bg-white/10 text-white font-bold text-lg px-8 py-3 rounded-full transition-colors" data-i18n="btn_contact">تواصل معنا</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="section_videos_title">أحدث الفيديوهات</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-500 max-w-2xl mx-auto" data-i18n="section_videos_desc">مجموعة من أحدث الترانيم والتسبيحات من قناتنا على يوتيوب.</p>
+            </div>
+
+            <!-- Videos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Placeholder Video 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/w00bzpbGVZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_1_title">ترنيمة يا سامع الصلاة</h3>
+                        <p class="text-sm text-slate-500" data-i18n="video_1_date">تم النشر: ٢١ نوفمبر ٢٠١٩</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/le_EB1W5v0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_2_title">انت سيد الكون</h3>
+                        <p class="text-sm text-slate-500" data-i18n="video_2_date">تم النشر: ٣١ مارس ٢٠٢٥</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/DQMGlNxsbrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_3_title">ترنيمة : داير اعبدك</h3>
+                        <p class="text-sm text-slate-500" data-i18n="video_3_date">تم النشر: ١١ أكتوبر ٢٠٢٢</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors text-lg group">
+                    <span data-i18n="btn_more_videos">شاهد المزيد على قناتنا</span>
+                    <i class="fa-solid fa-arrow-left rtl:fa-arrow-right rtl:rotate-180 transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Videos Section -->
+    <section id="social-videos" class="py-20 bg-slate-200 border-t border-slate-300 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="section_social_videos_title">فيديوهات مميزة من منصاتنا</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-i18n="section_social_videos_desc">أشهر المقاطع والترانيم القصيرة من حساباتنا على تيك توك وفيسبوك.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Facebook Video Embed -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-t-4 border-blue-600 flex flex-col">
+                    <div class="p-4 bg-blue-50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-facebook text-2xl text-blue-600"></i>
+                            <h3 class="font-bold text-slate-800" data-i18n="fb_video_title">ريلز فيسبوك | Facebook Reel</h3>
+                        </div>
+                    </div>
+                    <!-- Embed Container -->
+                    <div class="bg-slate-100 flex justify-center items-center overflow-hidden w-full" style="min-height: 500px;">
+                         <iframe src="https://www.facebook.com/plugins/video.php?height=720&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1DsrmGmaD1%2F&show_text=false&width=405&t=0" width="405" height="720" style="border:none;overflow:hidden; max-width: 100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+
+                <!-- TikTok Video Placeholder -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-t-4 border-black flex flex-col">
+                    <div class="p-4 bg-slate-50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-tiktok text-2xl text-black"></i>
+                            <h3 class="font-bold text-slate-800" data-i18n="tiktok_video_title">الأكثر مشاهدة على تيك توك</h3>
+                        </div>
+                    </div>
+                    <!-- TikTok Embed -->
+                    <div class="bg-slate-100 flex justify-center items-center overflow-hidden w-full h-full" style="min-height: 500px;">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@abnaakush8/video/7584555148798708999" data-video-id="7584555148798708999" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@abnaakush8" href="https://www.tiktok.com/@abnaakush8?refer=embed">@abnaakush8</a> بمسيحنا الغالي نفخر لا بنداري ولا بنخجل🙏🏾🙏🏾❤️ <a title="ترانيم_سودانية" target="_blank" href="https://www.tiktok.com/tag/%D8%AA%D8%B1%D8%A7%D9%86%D9%8A%D9%85_%D8%B3%D9%88%D8%AF%D8%A7%D9%86%D9%8A%D8%A9?refer=embed">#ترانيم_سودانية</a> <a title="ابناء_كوش" target="_blank" href="https://www.tiktok.com/tag/%D8%A7%D8%A8%D9%86%D8%A7%D8%A1_%D9%83%D9%88%D8%B4?refer=embed">#ابناء_كوش</a> <a title="السودان" target="_blank" href="https://www.tiktok.com/tag/%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A7%D9%86?refer=embed">#السودان</a> <a target="_blank" title="♬ original sound  - AbnaaKush" href="https://www.tiktok.com/music/original-sound-AbnaaKush-7584555224770136840?refer=embed">♬ original sound  - AbnaaKush</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="section_social_title">تابعونا على المنصات</h2>
+            <div class="w-24 h-1 bg-secondary mx-auto rounded-full mb-12"></div>
+            
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                <!-- Facebook -->
+                <a href="#" class="w-20 h-20 md:w-24 md:h-24 bg-blue-50 text-blue-600 rounded-full flex flex-col items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                    <i class="fa-brands fa-facebook-f text-3xl md:text-4xl mb-1"></i>
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="w-20 h-20 md:w-24 md:h-24 bg-red-50 text-red-600 rounded-full flex flex-col items-center justify-center hover:bg-red-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                    <i class="fa-brands fa-youtube text-3xl md:text-4xl mb-1"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="w-20 h-20 md:w-24 md:h-24 bg-pink-50 text-pink-600 rounded-full flex flex-col items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                    <i class="fa-brands fa-instagram text-3xl md:text-4xl mb-1"></i>
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@abnaakush8" target="_blank" rel="noopener noreferrer" class="w-20 h-20 md:w-24 md:h-24 bg-slate-100 text-slate-800 rounded-full flex flex-col items-center justify-center hover:bg-black hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                    <i class="fa-brands fa-tiktok text-3xl md:text-4xl mb-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-slate-300 py-10 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img src="Untitled%20(17).jpg" alt="Sons of Kush Logo" class="w-10 h-10 object-cover rounded-full border border-white/20">
+                <span class="font-bold text-white text-lg" data-i18n="nav_title">أبناء كوش</span>
+            </div>
+            
+            <p class="text-sm text-center md:text-start" data-i18n="footer_copyright">
+                &copy; 2026 فريق أبناء كوش للعبادة والتسبيح. جميع الحقوق محفوظة.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Translations & Interactivity Script -->
+    <script>
+        // Translations Dictionary
+        const translations = {
+            ar: {
+                nav_title: "أبناء كوش",
+                nav_home: "الرئيسية",
+                nav_videos: "فيديوهاتنا",
+                nav_social: "التواصل",
+                hero_badge: "مرحباً بكم",
+                hero_title: "فريق أبناء كوش للعبادة والتسبيح",
+                hero_subtitle: "نرفع أصواتنا في العبادة والتسبيح لتمجيد اسمه. تابع أحدث أعمالنا وترانيمنا هنا.",
+                btn_watch: "شاهد الفيديوهات",
+                btn_contact: "تواصل معنا",
+                section_videos_title: "أحدث الفيديوهات",
+                section_videos_desc: "مجموعة من أحدث الترانيم والتسبيحات من قناتنا على يوتيوب.",
+                video_1_title: "ترنيمة يا سامع الصلاة - فريق أبناء كوش (كلمات وألحان: جورج جون)",
+                video_1_date: "تم النشر: ٢١ نوفمبر ٢٠١٩",
+                video_2_title: "انت سيد الكون - كلمات يعقوب عزرا",
+                video_2_date: "تم النشر: ٣١ مارس ٢٠٢٥",
+                video_3_title: "ترنيمة : داير اعبدك - فريق أبناء كوش للعبادة و التسبيح",
+                video_3_date: "تم النشر: ١١ أكتوبر ٢٠٢٢",
+                btn_more_videos: "شاهد المزيد على قناتنا",
+                section_social_videos_title: "فيديوهات مميزة من منصاتنا",
+                section_social_videos_desc: "أشهر المقاطع والترانيم القصيرة من حساباتنا على تيك توك وفيسبوك.",
+                fb_video_title: "ترنيمة نعم المسيح",
+                tiktok_video_title: "بمسيحنا الغالي نفخر",
+                placeholder_link_needed: "يرجى توفير رابط الفيديو المباشر لإضافته هنا",
+                section_social_title: "تابعونا على المنصات",
+                footer_copyright: "© 2026 فريق أبناء كوش للعبادة والتسبيح. جميع الحقوق محفوظة."
+            },
+            en: {
+                nav_title: "Sons of Kush",
+                nav_home: "Home",
+                nav_videos: "Videos",
+                nav_social: "Contact",
+                hero_badge: "Welcome",
+                hero_title: "Sons of Kush Worship & Praise Team",
+                hero_subtitle: "Lifting our voices in worship and praise to glorify His name. Follow our latest hymns here.",
+                btn_watch: "Watch Videos",
+                btn_contact: "Contact Us",
+                section_videos_title: "Latest Videos",
+                section_videos_desc: "A collection of the latest hymns and praises from our YouTube channel.",
+                video_1_title: "Hymn: O Hearer of Prayer - Sons of Kush (Words & Melody: George John)",
+                video_1_date: "Published: Nov 21, 2019",
+                video_2_title: "You Are the Lord of the Universe - Words by Yacoub Ezra",
+                video_2_date: "Published: Mar 31, 2025",
+                video_3_title: "Hymn: Dayr Aabudak - Sons of Kush Worship and Praise Team",
+                video_3_date: "Published: Oct 11, 2022",
+                btn_more_videos: "Watch more on our channel",
+                section_social_videos_title: "Featured Social Videos",
+                section_social_videos_desc: "The most popular short clips and hymns from our TikTok and Facebook.",
+                fb_video_title: "Hymn: Naam Al Maseeh",
+                tiktok_video_title: "We Boast in Our Precious Christ",
+                placeholder_link_needed: "Please provide the direct video link to embed it here",
+                section_social_title: "Follow Us Online",
+                footer_copyright: "© 2026 Sons of Kush Worship and Praise Team. All rights reserved."
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            // Swap language
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const isAr = currentLang === 'ar';
+            
+            // Update HTML attributes for layout flow
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+
+            // Update button text
+            document.getElementById('lang-btn-text').innerText = isAr ? 'English' : 'عربي';
+
+            // Translate all elements with data-i18n attribute
+            const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+            elementsToTranslate.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerText = translations[currentLang][key];
+                }
+            });
+
+            // Adjust specific icon directions for LTR/RTL
+            const arrowIcons = document.querySelectorAll('.fa-arrow-left, .fa-arrow-right');
+            arrowIcons.forEach(icon => {
+                if (isAr) {
+                    icon.classList.remove('fa-arrow-right');
+                    icon.classList.add('fa-arrow-left');
+                } else {
+                    icon.classList.remove('fa-arrow-left');
+                    icon.classList.add('fa-arrow-right');
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
