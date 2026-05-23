@@ -57,7 +57,9 @@
                 
                 <!-- Logo / Title -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
-                    <img src="Untitled%20(17).jpg" alt="Sons of Kush Logo" class="w-12 h-12 object-cover rounded-full shadow-lg border-2 border-primary/10">
+                    <div class="w-10 h-10 bg-primary text-secondary rounded-full flex items-center justify-center text-xl shadow-lg">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
                     <span class="font-bold text-xl md:text-2xl text-primary" data-i18n="nav_title">أبناء كوش</span>
                 </div>
 
@@ -134,7 +136,29 @@
                 <!-- Placeholder Video 1 -->
                 <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                     <div class="aspect-w-16 bg-black relative flex items-center justify-center">
-                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/w00bzpbGVZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/w00bzpbGVZs?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_1_title">ترنيمة يا سامع الصلاة</h3>
+                        <p class="text-sm text-slate-500" data-i18n="video_1_date">تم النشر: ٢١ نوفمبر ٢٠١٩</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/le_EB1W5v0Q?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_2_title">انت سيد الكون</h3>
+                        <p class="text-sm text-slate-500" data-i18n="video_2_date">تم النشر: ٣١ مارس ٢٠٢٥</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/DQMGlNxsbrE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_1_title">ترنيمة يا سامع الصلاة</h3>
@@ -169,7 +193,7 @@
             <div class="text-center mt-12">
                 <a href="#" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors text-lg group">
                     <span data-i18n="btn_more_videos">شاهد المزيد على قناتنا</span>
-                    <i class="fa-solid fa-arrow-left rtl:fa-arrow-right rtl:rotate-180 transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"></i>
+                    <i class="fa-solid fa-arrow-right rtl:rotate-180 transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"></i>
                 </a>
             </div>
         </div>
@@ -195,7 +219,7 @@
                     </div>
                     <!-- Embed Container -->
                     <div class="bg-slate-100 flex justify-center items-center overflow-hidden w-full" style="min-height: 500px;">
-                         <iframe src="https://www.facebook.com/plugins/video.php?height=720&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1DsrmGmaD1%2F&show_text=false&width=405&t=0" width="405" height="720" style="border:none;overflow:hidden; max-width: 100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                         <iframe src="https://www.facebook.com/plugins/video.php?height=720&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1BTAffYwRx&show_text=false&width=405&t=0" width="405" height="720" style="border:none;overflow:hidden; max-width: 100%;" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
 
@@ -239,6 +263,10 @@
                 <a href="https://www.tiktok.com/@abnaakush8" target="_blank" rel="noopener noreferrer" class="w-20 h-20 md:w-24 md:h-24 bg-slate-100 text-slate-800 rounded-full flex flex-col items-center justify-center hover:bg-black hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
                     <i class="fa-brands fa-tiktok text-3xl md:text-4xl mb-1"></i>
                 </a>
+                <!-- Email -->
+                <a href="mailto:abnaakushworshipteam@gmail.com" class="w-20 h-20 md:w-24 md:h-24 bg-teal-50 text-teal-600 rounded-full flex flex-col items-center justify-center hover:bg-teal-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                    <i class="fa-solid fa-envelope text-3xl md:text-4xl mb-1"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -247,7 +275,9 @@
     <footer class="bg-primary text-slate-300 py-10 border-t border-primary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-3">
-                <img src="Untitled%20(17).jpg" alt="Sons of Kush Logo" class="w-10 h-10 object-cover rounded-full border border-white/20">
+                <div class="w-10 h-10 bg-primary border-2 border-secondary text-secondary rounded-full flex items-center justify-center text-xl shadow-lg">
+                    <i class="fa-solid fa-music text-lg"></i>
+                </div>
                 <span class="font-bold text-white text-lg" data-i18n="nav_title">أبناء كوش</span>
             </div>
             
@@ -337,18 +367,6 @@
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
                     el.innerText = translations[currentLang][key];
-                }
-            });
-
-            // Adjust specific icon directions for LTR/RTL
-            const arrowIcons = document.querySelectorAll('.fa-arrow-left, .fa-arrow-right');
-            arrowIcons.forEach(icon => {
-                if (isAr) {
-                    icon.classList.remove('fa-arrow-right');
-                    icon.classList.add('fa-arrow-left');
-                } else {
-                    icon.classList.remove('fa-arrow-left');
-                    icon.classList.add('fa-arrow-right');
                 }
             });
         }
