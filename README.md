@@ -161,28 +161,6 @@
                         <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/DQMGlNxsbrE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_1_title">ترنيمة يا سامع الصلاة</h3>
-                        <p class="text-sm text-slate-500" data-i18n="video_1_date">تم النشر: ٢١ نوفمبر ٢٠١٩</p>
-                    </div>
-                </div>
-
-                <!-- Video 2 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
-                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/le_EB1W5v0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_2_title">انت سيد الكون</h3>
-                        <p class="text-sm text-slate-500" data-i18n="video_2_date">تم النشر: ٣١ مارس ٢٠٢٥</p>
-                    </div>
-                </div>
-
-                <!-- Video 3 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="aspect-w-16 bg-black relative flex items-center justify-center">
-                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/DQMGlNxsbrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-800 mb-2" data-i18n="video_3_title">ترنيمة : داير اعبدك</h3>
                         <p class="text-sm text-slate-500" data-i18n="video_3_date">تم النشر: ١١ أكتوبر ٢٠٢٢</p>
                     </div>
@@ -191,7 +169,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors text-lg group">
+                <a href="https://www.youtube.com/@abnaakush4081" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors text-lg group">
                     <span data-i18n="btn_more_videos">شاهد المزيد على قناتنا</span>
                     <i class="fa-solid fa-arrow-right rtl:rotate-180 transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"></i>
                 </a>
@@ -248,15 +226,15 @@
             
             <div class="flex flex-wrap justify-center gap-6 md:gap-10">
                 <!-- Facebook -->
-                <a href="#" class="w-20 h-20 md:w-24 md:h-24 bg-blue-50 text-blue-600 rounded-full flex flex-col items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                <a href="https://www.facebook.com/profile.php?id=61561245110328&sk=about" target="_blank" rel="noopener noreferrer" class="w-20 h-20 md:w-24 md:h-24 bg-blue-50 text-blue-600 rounded-full flex flex-col items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
                     <i class="fa-brands fa-facebook-f text-3xl md:text-4xl mb-1"></i>
                 </a>
                 <!-- YouTube -->
-                <a href="#" class="w-20 h-20 md:w-24 md:h-24 bg-red-50 text-red-600 rounded-full flex flex-col items-center justify-center hover:bg-red-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                <a href="https://www.youtube.com/@abnaakush4081" target="_blank" rel="noopener noreferrer" class="w-20 h-20 md:w-24 md:h-24 bg-red-50 text-red-600 rounded-full flex flex-col items-center justify-center hover:bg-red-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
                     <i class="fa-brands fa-youtube text-3xl md:text-4xl mb-1"></i>
                 </a>
                 <!-- Instagram -->
-                <a href="#" class="w-20 h-20 md:w-24 md:h-24 bg-pink-50 text-pink-600 rounded-full flex flex-col items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
+                <a href="https://www.instagram.com/abnaa.kush" target="_blank" rel="noopener noreferrer" class="w-20 h-20 md:w-24 md:h-24 bg-pink-50 text-pink-600 rounded-full flex flex-col items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all transform hover:-translate-y-2 shadow-sm hover:shadow-lg">
                     <i class="fa-brands fa-instagram text-3xl md:text-4xl mb-1"></i>
                 </a>
                 <!-- TikTok -->
